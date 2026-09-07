@@ -1,6 +1,6 @@
 name: Schedule Login Test
 
-# This schedules the test ex: 13:40 UTC + 5 hours 30 minutes = 3:00 PM IST
+# This schedules the test ex: 15:00 (3 pm) UTC + 5 hours 30 minutes = 8:30 PM IST
 on:
   schedule:
     - cron: '0 15 * * *'
@@ -20,9 +20,7 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
 
-      - name: Run LoginTest
-        run: mvn test -Dtest=LoginTest
-
+     
       - name: Install Playwright browsers
         run: mvn exec:java -e -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="install --with-deps"
 
