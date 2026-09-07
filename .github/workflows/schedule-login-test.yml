@@ -1,9 +1,9 @@
 name: Schedule Login Test
 
-# This schedules the test ex: 13:40 UTC + 5 hours 30 minutes = 7:10 PM IST
+# This schedules the test ex: 13:40 UTC + 5 hours 30 minutes = 3:00 PM IST
 on:
   schedule:
-    - cron: '40 13 * * *'
+    - cron: '0 15 * * *'
   workflow_dispatch:
 
 jobs:
